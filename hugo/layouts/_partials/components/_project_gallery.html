@@ -1,0 +1,62 @@
+<div class="project-gallery">
+    {{ $galleryImages := .Resources.Match "gallery_*" }}
+    <div class="project-gallery__container">
+        {{ range .Params.Videos }}
+            <div class="project-gallery__container__item">
+                {{ partial "components/_video.html" . }}
+            </div>
+        {{ end }}
+        {{ range $galleryImages }}
+            {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__container__item") }}
+        {{ end }}
+        <button class="project-gallery__button-next">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <circle class="fill-primary" cx="243.811" cy="243.811" r="243.811"></circle>
+                            <path class="fill-primary" d="M481.215,299.541L260.559,130.669l-1.252,66.722L95.846,304.873L307.35,479.238 C393.514,456.04,460.805,386.815,481.215,299.541z"></path>
+                            <path class="fill-secondary" d="M481.215,299.541L260.559,130.669l-1.252,66.722 L95.846,304.873L307.35,479.238C393.514,456.04,460.805,386.815,481.215,299.541z"></path>
+                            <polygon style="fill:#FFFFFF;" points="407.25,243.811 260.559,130.669 260.559,182.749 95.846,182.749 95.846,304.873 260.559,304.873 260.559,356.953 "></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <button class="project-gallery__button-previous">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <circle class="fill-primary" cx="243.811" cy="243.811" r="243.811"></circle>
+                            <path class="fill-primary" d="M481.215,299.541L260.559,130.669l-1.252,66.722L95.846,304.873L307.35,479.238 C393.514,456.04,460.805,386.815,481.215,299.541z"></path>
+                            <path class="fill-secondary" d="M481.215,299.541L260.559,130.669l-1.252,66.722 L95.846,304.873L307.35,479.238C393.514,456.04,460.805,386.815,481.215,299.541z"></path>
+                            <polygon style="fill:#FFFFFF;" points="407.25,243.811 260.559,130.669 260.559,182.749 95.846,182.749 95.846,304.873 260.559,304.873 260.559,356.953 "></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+    </div>
+    <div class="project-gallery__simplebar-container" data-simplebar>
+        <div class="project-gallery__preview-container" >
+            {{ range .Params.Videos }}
+            <div class="project-gallery__preview-container__item">
+                {{ partial "components/_video_thumbnail.html" . }}
+            </div>
+            {{ end }}
+            {{ range $galleryImages }}
+            {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__preview-container__item") }}
+            {{ end }}
+            <div class="simplebar-spacer"></div>
+        </div>
+    </div>
+    {{ $galleryScript := resources.Get "/js/components/projectGallery.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $galleryScript.RelPermalink }}" integrity="{{ $galleryScript.Data.Integrity }}"></script>
+    {{ $scrollbarScript := resources.Get "/js/components/scrollbar.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $scrollbarScript.RelPermalink }}" integrity="{{ $scrollbarScript.Data.Integrity }}"></script>
+</div>

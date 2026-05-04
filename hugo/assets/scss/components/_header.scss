@@ -1,0 +1,21 @@
+header
+{
+  flex: 0 0 $header_height;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 36px;
+
+  background-color: theme("ground");
+}
+
+.branding
+{
+  display: flex;
+  align-items: center;
+
+  @include hanuman-normal-bold(3rem);
+}

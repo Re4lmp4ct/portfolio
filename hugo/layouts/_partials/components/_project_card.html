@@ -1,0 +1,12 @@
+<div class="project-card">
+    <div class="project-card__preview">
+        {{ partial "image.html" (dict "Src" "thumbnail.png" "Context" . "Class" "project-card__thumbnail") }}
+        <a class="project-card__overlay" href="{{ .RelPermalink }}">
+            <p class="project-card__link">Read More</p>
+        </a>
+    </div>
+    <div class="project-card__information">
+        <div class="project-card__title">{{ .Title }}</div>
+        <div class="project-card__summary">{{ .Summary }}</div>
+    </div>
+</div>

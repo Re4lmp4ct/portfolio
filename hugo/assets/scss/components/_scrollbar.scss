@@ -1,0 +1,34 @@
+.simplebar-track
+{
+  background: theme("accent");
+  border-radius: 6px;
+
+  padding: 8px 0;
+}
+
+.simplebar-track.simplebar-horizontal
+{
+  bottom: 0;
+}
+
+.simplebar-scrollbar::before {
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+
+  opacity: 1;
+  transition: none !important;
+  background-color: theme("secondary");
+}
+
+.simplebar-content-wrapper {
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}
+
+.simplebar-spacer
+{
+  width: 1px;
+  height: 100%;
+}

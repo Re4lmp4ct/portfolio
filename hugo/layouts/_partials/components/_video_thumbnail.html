@@ -1,0 +1,7 @@
+<div class="video-thumbnail">
+    {{ $videoThumbnail := print "https://img.youtube.com/vi/" . "/default.jpg" }}
+    {{ partial "image.html" (dict "Src" $videoThumbnail) }}
+    <div class="video-thumbnail__overlay">
+        <img src="/icons/button_play.svg" width="32" height="32">
+    </div>
+</div>

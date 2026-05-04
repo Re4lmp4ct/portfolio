@@ -1,0 +1,65 @@
+*,
+*:before,
+*:after
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html
+{
+  font-size: 62.5%;
+
+  height: 100%;
+}
+
+body
+{
+  color: theme("text-primary");
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+main
+{
+  background-color: theme("background");
+}
+
+main
+{
+  flex: 1;
+
+  margin: 3rem 0;
+}
+
+header,
+footer
+{
+  background-color: theme("ground");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+  @include hanuman-normal-bold(1rem)
+}
+
+p,
+a
+{
+  @include lexend-deca-normal(1rem, 400)
+}
+
+a
+{
+  text-decoration: none;
+  color: inherit;
+}

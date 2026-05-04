@@ -1,0 +1,48 @@
+$screen-types:
+(
+  "mobile": 0px,
+  "tablet": 768px,
+  "desktop": 1024px,
+);
+
+@mixin screen_type($type)
+{
+  $size: map-get($screen-types, $type);
+
+  @if $size
+  {
+    @media screen and (min-width: $size)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @warn "Invalid type "#{$type}".";
+  }
+}
+
+$size-breakpoints: (
+    "xs": 480px,
+    "sm": 768px,
+    "md": 1024px,
+    "lg": 1280px,
+    "xl": 1440px
+);
+
+@mixin screen-size($breakpoint)
+{
+  $size: map-get($size-breakpoints, $breakpoint);
+
+  @if $size
+  {
+    @media screen and (min-width: $size)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @warn "Invalid breakpoint "#{$breakpoint}".";
+  }
+}

@@ -1,0 +1,15 @@
+footer
+{
+  flex: 0 0 $footer_height;
+
+  padding: 12px 0;
+
+  background-color: theme("ground");
+
+  p,
+  a
+  {
+    @include lexend-deca-italic(1.3rem, 400);
+    text-align: center;
+  }
+}

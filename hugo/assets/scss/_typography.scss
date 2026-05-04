@@ -1,0 +1,82 @@
+@mixin font-base($family, $size, $weight, $style)
+{
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin hanuman($size, $weight, $style)
+{
+  @include font-base(("Hanuman", sans-serif), $size, $weight, $style);
+}
+
+@mixin hanuman-normal($size, $weight)
+{
+  @include hanuman($size, $weight, normal);
+}
+
+@mixin hanuman-normal-bold($size)
+{
+  @include hanuman-normal($size, bold);
+}
+
+@mixin hanuman-italic($size, $weight)
+{
+  @include hanuman($size, $weight, italic);
+}
+
+@mixin hanuman-italic-bold($size)
+{
+  @include hanuman-italic($size, bold);
+}
+
+@mixin lexend-deca($size, $weight, $style)
+{
+  @include font-base(("Lexend Deca", sans-serif), $size, $weight, $style);
+}
+
+@mixin lexend-deca-normal($size, $weight)
+{
+  @include lexend-deca($size, $weight, normal);
+}
+
+@mixin lexend-deca-normal-bold($size)
+{
+  @include lexend-deca-normal($size, bold);
+}
+
+@mixin lexend-deca-italic($size, $weight)
+{
+  @include lexend-deca($size, $weight, italic);
+}
+
+@mixin lexend-deca-italic-bold($size)
+{
+  @include lexend-deca-italic($size, bold);
+}
+
+@mixin fira-code($size, $weight, $style)
+{
+  @include font-base(("Fira Code", monospace), $size, $weight, $style);
+}
+
+@mixin fira-code-normal($size, $weight)
+{
+  @include fira-code($size, $weight, normal);
+}
+
+@mixin fira-code-normal-bold($size)
+{
+  @include fira-code-normal($size, bold);
+}
+
+@mixin fira-code-italic($size, $weight)
+{
+  @include fira-code($size, $weight, italic);
+}
+
+@mixin fira-code-italic-bold($size)
+{
+  @include fira-code-italic($size, bold);
+}
