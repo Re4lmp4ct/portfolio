@@ -4,6 +4,5 @@ params:
       - link: "plugins/glightbox/glightbox.css"
     js:
       - link: "plugins/glightbox/glightbox.js"
-      - link: "js/accordion.js"
       - link: "js/tab.js"
       - link: "plugins/lazy-loader.js"

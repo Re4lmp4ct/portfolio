@@ -12,12 +12,16 @@ html
   font-size: 62.5%;
 
   height: 100%;
+
+  overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 body
 {
   color: theme("text-primary");
 
+  width: 100vw;
   min-height: 100%;
 
   display: flex;

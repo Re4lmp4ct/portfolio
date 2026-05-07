@@ -10,7 +10,7 @@
             {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__container__item") }}
         {{ end }}
         <button class="project-gallery__button-next">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000">
+            <svg version="1.1" id="icon-next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -26,7 +26,7 @@
             </svg>
         </button>
         <button class="project-gallery__button-previous">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
+            <svg version="1.1" id="icon-previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -55,7 +55,7 @@
             <div class="simplebar-spacer"></div>
         </div>
     </div>
-    {{ $galleryScript := resources.Get "/js/components/projectGallery.js" | resources.Minify | resources.Fingerprint }}
+    {{ $galleryScript := resources.Get "/js/components/project_gallery.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $galleryScript.RelPermalink }}" integrity="{{ $galleryScript.Data.Integrity }}"></script>
     {{ $scrollbarScript := resources.Get "/js/components/scrollbar.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $scrollbarScript.RelPermalink }}" integrity="{{ $scrollbarScript.Data.Integrity }}"></script>

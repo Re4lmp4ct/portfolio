@@ -4,9 +4,12 @@ $footer_height: 40px;
 $project_card_radius: 16px;
 $project_thumbnail_width: 384px;
 $project_thumbnail_height: 320px;
+
+$project_page_width: 75%;
 $project_gallery_button_size: 32px;
 $project_gallery_button_padding: 16px;
 $project_gallery_button_offset: calc((#{$project_gallery_button_size} + #{$project_gallery_button_padding}) * -1);
+$project_accordion_header_radius: 12px;
 
 //https://octet.design/colors/palette/subtle-lighting-color-palette-1731325100/
 $theme_subtle_lighting:
