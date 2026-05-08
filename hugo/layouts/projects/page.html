@@ -4,10 +4,6 @@
         <div class="project-page__content">
             {{ .Content }}
         </div>
-        <div class="project-accordion">
-            {{ partial "components/_project_accordion_item.html" (dict "Title" "Hello" "Content" "How are You") }}
-            {{ partial "components/_project_accordion_item.html" (dict "Title" "Hello" "Content" "How are You") }}
-        </div>
         {{ $accordionScript := resources.Get "/js/components/project_accordion.js" | resources.Minify | resources.Fingerprint }}
         <script src="{{ $accordionScript.RelPermalink }}" integrity="{{ $accordionScript.Data.Integrity }}"></script>
     </div>

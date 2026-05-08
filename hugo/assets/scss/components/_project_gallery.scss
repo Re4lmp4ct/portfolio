@@ -21,6 +21,10 @@
     position: relative;
     aspect-ratio: 16 / 9;
 
+    @include screen_type("mobile")
+    {
+    }
+
     &__item
     {
       width: 100%;
@@ -31,11 +35,55 @@
     }
   }
 
+  @include screen_type("mobile")
+  {
+    $project_gallery_button_size: $project_gallery_button_size * 0.75;
+    $project_gallery_button_offset: calc((#{$project_gallery_button_size} + #{$project_gallery_button_padding} * 0.8) * -1);
+
+    &__button-next,
+    &__button-previous
+    {
+      width: $project_gallery_button_size;
+      height: $project_gallery_button_size;
+    }
+
+    &__button-next
+    {
+      right: $project_gallery_button_offset;
+    }
+
+    &__button-previous
+    {
+      left: $project_gallery_button_offset;
+    }
+  }
+
+  @include screen_type("tablet", "desktop")
+  {
+    &__button-next,
+    &__button-previous
+    {
+      width: $project_gallery_button_size;
+      height: $project_gallery_button_size;
+    }
+
+    &__button-next
+    {
+      right: $project_gallery_button_offset;
+    }
+
+    &__button-previous
+    {
+      left: $project_gallery_button_offset;
+    }
+  }
+
   &__button-next,
   &__button-previous
   {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
 
     background-color: rgba(0,0,0,0);
 
@@ -56,8 +104,8 @@
 
     svg
     {
-      width: $project_gallery_button_size;
-      height: $project_gallery_button_size;
+      width: 100%;
+      height: 100%;
     }
 
     .fill-primary
@@ -70,16 +118,6 @@
         fill: theme("secondary");
         opacity: 0.37;
     }
-  }
-
-  &__button-next
-  {
-    right: $project_gallery_button_offset;
-  }
-
-  &__button-previous
-  {
-    left: $project_gallery_button_offset;
   }
 
   &__simplebar-container

@@ -6,20 +6,6 @@ summary: "A 2D puzzle game where the players connect characters called Novanauts
 videos: 
   - "lDTYOTV6OyU"
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi accumsan fringilla tristique. 
-Ut massa nisl, dictum vel facilisis quis, blandit at tellus. Vivamus ut felis convallis, hendrerit odio non, iaculis purus. 
-Aliquam fringilla volutpat ipsum, at tincidunt magna. Proin sed convallis mi. Maecenas ullamcorper consequat fermentum. 
-Suspendisse potenti. Suspendisse at ullamcorper tortor. Vivamus quis varius dui. Mauris gravida at lacus sit amet luctus. 
-Maecenas elit urna, blandit quis justo vel, tincidunt laoreet ipsum. Curabitur suscipit maximus facilisis. 
-Phasellus quis turpis aliquam, consectetur massa vitae, malesuada nibh.
-
-Vivamus ac diam vestibulum, convallis lacus sit amet, aliquam ipsum. Proin eu risus aliquet, suscipit augue vel, iaculis leo. 
-Nullam efficitur rhoncus mi, vitae molestie elit faucibus id. Pellentesque ultrices eros neque, eu viverra lorem viverra vitae. 
-Donec rutrum fermentum felis, ac aliquet enim sodales sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Quisque in pulvinar justo, iaculis feugiat dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-Proin congue interdum tellus, vitae rutrum elit imperdiet vitae. Integer vestibulum maximus lectus vel porta. 
-Nam auctor tortor arcu, sed ultricies neque consequat quis. Nullam ultrices a metus eu pellentesque.
-
 Fusce eget sapien a velit tempor porttitor vel id est. Donec rhoncus interdum velit ut pharetra. Aenean porta condimentum lacus vel faucibus. 
 Proin consequat urna non felis iaculis, nec sodales sapien sodales. Pellentesque sit amet congue orci, tempor finibus lectus. 
 Pellentesque sapien magna, volutpat vitae risus in, gravida facilisis dolor. Etiam dignissim justo justo, vel scelerisque enim molestie non.
@@ -35,3 +21,46 @@ Curabitur ultricies commodo metus, id lobortis dolor imperdiet vitae. Aenean id 
 Vestibulum ut fermentum libero, commodo luctus ligula. Vestibulum et nulla interdum, dapibus magna vitae, porta libero. 
 Sed lacinia erat libero, tincidunt sollicitudin diam facilisis sed. In placerat a ipsum ut blandit. Suspendisse congue nunc velit, sed laoreet odio venenatis a. 
 Fusce et purus et diam viverra vestibulum eget vitae velit. Fusce mi nisl, aliquam eu magna ac, ultricies semper ante.
+
+<div class="project-page__content__contributions">
+    <h1>Key Contributions</h1>
+    <div class="project-accordion">
+        {{< components/project_accordion_item title="Hello">}}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi accumsan fringilla tristique. 
+                Ut massa nisl, dictum vel facilisis quis, blandit at tellus. Vivamus ut felis convallis, hendrerit odio non, iaculis purus. 
+                Aliquam fringilla volutpat ipsum, at tincidunt magna. Proin sed convallis mi. Maecenas ullamcorper consequat fermentum. 
+                Suspendisse potenti. Suspendisse at ullamcorper tortor. Vivamus quis varius dui. Mauris gravida at lacus sit amet luctus. 
+                Maecenas elit urna, blandit quis justo vel, tincidunt laoreet ipsum. Curabitur suscipit maximus facilisis. 
+                Phasellus quis turpis aliquam, consectetur massa vitae, malesuada nibh.
+            </p>
+            <p>
+                Vivamus ac diam vestibulum, convallis lacus sit amet, aliquam ipsum. Proin eu risus aliquet, suscipit augue vel, iaculis leo.
+                Nullam efficitur rhoncus mi, vitae molestie elit faucibus id. Pellentesque ultrices eros neque, eu viverra lorem viverra vitae.
+                Donec rutrum fermentum felis, ac aliquet enim sodales sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Quisque in pulvinar justo, iaculis feugiat dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Proin congue interdum tellus, vitae rutrum elit imperdiet vitae. Integer vestibulum maximus lectus vel porta.
+                Nam auctor tortor arcu, sed ultricies neque consequat quis. Nullam ultrices a metus eu pellentesque.
+            </p>
+        {{< /components/project_accordion_item >}}
+        {{< components/project_accordion_item title="Hello">}}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi accumsan fringilla tristique. 
+                Ut massa nisl, dictum vel facilisis quis, blandit at tellus. Vivamus ut felis convallis, hendrerit odio non, iaculis purus. 
+                Aliquam fringilla volutpat ipsum, at tincidunt magna. Proin sed convallis mi. Maecenas ullamcorper consequat fermentum. 
+                Suspendisse potenti. Suspendisse at ullamcorper tortor. Vivamus quis varius dui. Mauris gravida at lacus sit amet luctus. 
+                Maecenas elit urna, blandit quis justo vel, tincidunt laoreet ipsum. Curabitur suscipit maximus facilisis. 
+                Phasellus quis turpis aliquam, consectetur massa vitae, malesuada nibh.
+            </p>
+            <p>
+                Vivamus ac diam vestibulum, convallis lacus sit amet, aliquam ipsum. Proin eu risus aliquet, suscipit augue vel, iaculis leo.
+                Nullam efficitur rhoncus mi, vitae molestie elit faucibus id. Pellentesque ultrices eros neque, eu viverra lorem viverra vitae.
+                Donec rutrum fermentum felis, ac aliquet enim sodales sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Quisque in pulvinar justo, iaculis feugiat dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Proin congue interdum tellus, vitae rutrum elit imperdiet vitae. Integer vestibulum maximus lectus vel porta.
+                Nam auctor tortor arcu, sed ultricies neque consequat quis. Nullam ultrices a metus eu pellentesque.
+            </p>
+        {{< /components/project_accordion_item >}}
+    </div>
+</div>
+   

@@ -6,10 +6,23 @@ footer
 
   background-color: theme("ground");
 
-  p,
-  a
+  @include screen_type("mobile")
   {
-    @include lexend-deca-italic(1.3rem, 400);
-    text-align: center;
+    p,
+    a
+    {
+      @include lexend-deca-italic(1.1rem, 400);
+      text-align: center;
+    }
+  }
+
+  @include screen_type("tablet", "desktop")
+  {
+    p,
+    a
+    {
+      @include lexend-deca-italic(1.3rem, 400);
+      text-align: center;
+    }
   }
 }

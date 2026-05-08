@@ -10,12 +10,12 @@ for (const accordion of accordions)
     iconClose.style.display = "none";
 
     header.addEventListener("click", (e) => {
-        if (content.style.maxHeight)
+        if (content.style.maxHeight !== "0px")
         {
             header.classList.remove("opened");
             iconOpen.style.display = "block";
             iconClose.style.display = "none";
-            content.style.maxHeight = null;
+            content.style.maxHeight = "0px";
         }
         else
         {

@@ -5,20 +5,23 @@ $screen-types:
   "desktop": 1024px,
 );
 
-@mixin screen_type($type)
+@mixin screen_type($types...)
 {
-  $size: map-get($screen-types, $type);
+  @each $type in $types
+  {
+    $size: map-get($screen-types, $type);
 
-  @if $size
-  {
-    @media screen and (min-width: $size)
+    @if $size
     {
-      @content;
+      @media screen and (min-width: $size)
+      {
+        @content;
+      }
     }
-  }
-  @else
-  {
-    @warn "Invalid type "#{$type}".";
+    @else
+    {
+      @warn "Invalid type "#{$type}".";
+    }
   }
 }
 
@@ -30,19 +33,22 @@ $size-breakpoints: (
     "xl": 1440px
 );
 
-@mixin screen-size($breakpoint)
+@mixin screen-size($breakpoints...)
 {
-  $size: map-get($size-breakpoints, $breakpoint);
+  @each $breakpoint in $breakpoints
+  {
+    $size: map-get($size-breakpoints, $breakpoint);
 
-  @if $size
-  {
-    @media screen and (min-width: $size)
+    @if $size
     {
-      @content;
+      @media screen and (min-width: $size)
+      {
+        @content;
+      }
     }
-  }
-  @else
-  {
-    @warn "Invalid breakpoint "#{$breakpoint}".";
+    @else
+    {
+      @warn "Invalid breakpoint "#{$breakpoint}".";
+    }
   }
 }

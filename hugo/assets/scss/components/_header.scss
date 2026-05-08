@@ -2,12 +2,26 @@ header
 {
   flex: 0 0 $header_height;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include screen_type("mobile")
+  {
+    padding: 24px 36px;
 
-  padding: 12px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  @include screen_type("tablet", "desktop")
+  {
+    padding: 12px 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   background-color: theme("ground");
 }
