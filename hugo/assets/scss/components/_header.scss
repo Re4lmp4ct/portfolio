@@ -1,6 +1,6 @@
 header
 {
-  flex: 0 0 $header_height;
+  flex: 0 0 var(--header-height);
 
   @include screen_type("mobile")
   {
@@ -8,9 +8,8 @@ header
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
   }
 
   @include screen_type("tablet", "desktop")

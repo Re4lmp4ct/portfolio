@@ -1,5 +1,6 @@
+{{ $page := .page }}
 <div class="project-gallery">
-    {{ $galleryImages := .Resources.Match "gallery_*" }}
+    {{ $galleryImages := $page.Resources.Match "gallery_*" }}
     <div class="project-gallery__container">
         {{ range .Params.Videos }}
             <div class="project-gallery__container__item">
@@ -10,7 +11,7 @@
             {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__container__item") }}
         {{ end }}
         <button class="project-gallery__button-next">
-            <svg version="1.1" id="icon-next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000">
+            <svg id="icon-next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -26,7 +27,7 @@
             </svg>
         </button>
         <button class="project-gallery__button-previous">
-            <svg version="1.1" id="icon-previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
+            <svg id="icon-previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.622 487.622" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -42,15 +43,15 @@
             </svg>
         </button>
     </div>
-    <div class="project-gallery__simplebar-container" data-simplebar>
+    <div class="project-gallery__simplebar-container background-color-ground" data-simplebar>
         <div class="project-gallery__preview-container" >
             {{ range .Params.Videos }}
-            <div class="project-gallery__preview-container__item">
-                {{ partial "components/_video_thumbnail.html" . }}
-            </div>
+                <div class="project-gallery__preview-container__item">
+                    {{ partial "components/_video_thumbnail.html" . }}
+                </div>
             {{ end }}
             {{ range $galleryImages }}
-            {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__preview-container__item") }}
+                {{ partial "image.html" (dict "Src" .Permalink "Class" "project-gallery__preview-container__item") }}
             {{ end }}
             <div class="simplebar-spacer"></div>
         </div>

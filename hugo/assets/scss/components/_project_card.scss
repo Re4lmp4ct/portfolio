@@ -1,8 +1,6 @@
 .project-card
 {
-  background-color: theme("surface");
-
-  border-radius: $project_card_radius;
+  border-radius: 16px;
 
   &__preview
   {
@@ -10,12 +8,16 @@
     display: inline-block;
   }
 
+  &__thumbnail,
+  &__overlay
+  {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
   &__thumbnail
   {
     display: block;
-
-    border-top-left-radius: $project_card_radius;
-    border-top-right-radius: $project_card_radius;
   }
 
   &__overlay
@@ -58,15 +60,5 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-
-  &__title
-  {
-    @include hanuman-normal-bold(2rem)
-  }
-
-  &__summary
-  {
-    @include lexend-deca-normal(1.4rem, 400);
   }
 }

@@ -3,7 +3,6 @@ languageCode: 'en-us'
 title: 'Haziq Hamsyari | Portfolio'
 module:
   imports:
-    - path: "github.com/gethugothemes/hugo-modules/tab"
     - path: "github.com/gethugothemes/hugo-modules/images"
 markup:
   goldmark:
@@ -15,6 +14,5 @@ params:
       - link: "plugins/glightbox/glightbox.css"
     js:
       - link: "plugins/glightbox/glightbox.js"
-      - link: "js/tab.js"
       - link: "plugins/lazy-loader.js"
 

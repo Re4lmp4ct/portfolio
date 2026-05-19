@@ -1,6 +1,7 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Content }}</p>
-
-    {{ partial "components/_project_grid.html" (dict "Projects" .RegularPagesRecursive.ByDate.Reverse) }}
+    <div class="project-section">
+        <h1 class="text-align-center">{{ .Title }}</h1>
+        {{ partial "components/_project_tabs.html" . }}
+        {{ partial "components/_project_grid.html" (dict "Projects" .RegularPagesRecursive.ByDate.Reverse) }}
+    </div>
 {{ end }}

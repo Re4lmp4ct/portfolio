@@ -1,0 +1,27 @@
+.primary-button
+{
+  border-radius: var(--button-radius);
+
+  background-color: theme("primary");
+
+  text-align: center;
+  text-decoration: none;
+
+  &:hover
+  {
+    background-color: theme("secondary");
+  }
+
+  p,
+  a
+  {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 8px 16px;
+
+    @include hanuman-normal-bold(1.4rem);
+  }
+}

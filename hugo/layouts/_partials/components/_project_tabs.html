@@ -1,0 +1,15 @@
+<nav class="project-tabs">
+    {{ $currentPage := . }}
+    <ul>
+        <li class='project-tabs__item
+                   {{ if eq (site.GetPage "section" "projects").RelPermalink $.RelPermalink }}project-tabs__active{{ end }}'>
+            <a href='{{ (site.GetPage "section" "projects").RelPermalink }}'>All</a>
+        </li>
+        {{ range (site.GetPage "section" "projects").Sections.ByWeight }}
+            <li class='project-tabs__item
+                       {{ if eq .RelPermalink $.RelPermalink }}project-tabs__active{{ end }}'>
+                <a href='{{ .RelPermalink }}'>{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>

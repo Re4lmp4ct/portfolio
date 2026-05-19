@@ -1,0 +1,28 @@
+.page
+{
+  margin: 3rem 0;
+
+  @include screen_type("mobile")
+  {
+    width: 75%;
+  }
+
+  @include screen_type("tablet", "desktop")
+  {
+    width: 75%;
+  }
+
+  justify-self: center;
+
+  &__header
+  {
+    margin-bottom: 2rem;
+  }
+
+  &__content
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

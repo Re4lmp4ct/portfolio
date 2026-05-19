@@ -1,9 +1,33 @@
 {{ define "main" }}
-    <div class="project-page">
-        {{ partial "components/_project_gallery.html" . }}
-        <div class="project-page__content">
+    {{ $page := . }}
+    <div class="page">
+        <div class="page__header">
+            <h1 class="text-align-center">{{ .Params.title }}</h1>
+        </div>
+        {{ partial "components/_project_gallery.html" (dict "page" $page)}}
+        <div class="separator"></div>
+        {{ if .Params.details }}
+            <div class="project-details">
+                {{ range .Params.details }}
+                    <p>{{ .name }} :</p>
+                    <p>{{ .value }}</p>
+                {{ end }}
+            </div>
+            <div class="separator"></div>
+        {{ end }}
+        <div class="page__content">
             {{ .Content }}
         </div>
+        {{ if .Params.contributions }}
+            <div class="separator"></div>
+            <h1 class="text-align-center">Key Contributions</h1>
+            <div class="project-accordion">
+                {{ range .Params.contributions }}
+                    {{ partial "components/_project_accordion_item.html" (dict "page" $page "item" .) }}
+                {{ end }}
+            </div>
+        {{ end }}
+
         {{ $accordionScript := resources.Get "/js/components/project_accordion.js" | resources.Minify | resources.Fingerprint }}
         <script src="{{ $accordionScript.RelPermalink }}" integrity="{{ $accordionScript.Data.Integrity }}"></script>
     </div>

@@ -5,24 +5,24 @@
 
   width: 100%;
 
-  padding: 0 36px;
+  padding: 16px 36px;
 
   @include screen_type("mobile")
   {
-    grid-template-columns: minmax(50%, $project_thumbnail_width);
+    grid-template-columns: minmax(50%, var(--project-thumbnail-width));
     row-gap: 3rem;
   }
 
   @include screen_type("tablet")
   {
-    grid-template-columns: repeat(2, minmax(20%, $project_thumbnail_width));
+    grid-template-columns: repeat(2, minmax(20%, var(--project-thumbnail-width)));
     column-gap: 2rem;
     row-gap: 3rem;
   }
 
   @include screen_type("desktop")
   {
-    grid-template-columns: repeat(3, minmax(10%, $project_thumbnail_width));
+    grid-template-columns: repeat(3, minmax(10%, var(--project-thumbnail-width)));
     column-gap: 2rem;
     row-gap: 3rem;
   }

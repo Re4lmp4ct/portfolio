@@ -1,3 +1,27 @@
 {{ define "main" }}
-    <h1>Home</h1>
+    <div class="home">
+        <div class="hero">
+            <h1 class="text-align-center">
+                Welcome! I am a software engineer with a passion for game development!
+            </h1>
+            <p class="text-align-center">
+                This portfolio contains all projects that I have worked on, both good and bad,
+                as I am proud of my contributions no matter the outcome.
+            </p>
+            <button class="primary-button"><a href="/projects">View Projects</a></button>
+        </div>
+        <!-- Commenting out until I can figure out a nice design for this
+        <div class="featured background-color-ground">
+            <h1 class="text-align-center">Featured Projects</h1>
+            <p class="text-align-center">These are projects with notable contributions or achievements.</p>
+            {{ with site.GetPage "section" "projects" }}
+                {{ range .RegularPagesRecursive.ByDate.Reverse }}
+                    {{ if .Params.featured }}
+                        <p>{{ .Title }}</p>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+        -->
+    </div>
 {{ end }}

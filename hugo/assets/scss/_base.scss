@@ -37,8 +37,6 @@ main
 main
 {
   flex: 1;
-
-  margin: 3rem 0;
 }
 
 header,
@@ -51,15 +49,44 @@ h1,
 h2,
 h3,
 h4,
+h5,
+p,
+a,
+button
+{
+  color: theme("text-primary");
+}
+
+h1
+{
+  @include hanuman-normal-bold(2.5rem)
+}
+
+h2
+{
+  @include hanuman-normal-bold(2.25rem)
+}
+
+h3
+{
+  @include hanuman-normal-bold(2rem)
+}
+
+h4
+{
+  @include hanuman-normal-bold(1.75rem)
+}
+
 h5
 {
-  @include hanuman-normal-bold(1rem)
+  @include hanuman-normal-bold(1.5rem)
 }
 
 p,
-a
+a,
+li
 {
-  @include lexend-deca-normal(1rem, 400)
+  @include lexend-deca-normal(1.5rem, 400)
 }
 
 a

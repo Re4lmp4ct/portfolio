@@ -1,38 +1,36 @@
 .navigation
 {
-  list-style-type: none;
+  ul
+  {
+    list-style-type: none;
 
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @include screen_type("mobile")
+    {
+      gap: 16px;
+    }
+
+    @include screen_type("tablet", "desktop")
+    {
+      gap: 16px;
+    }
+  }
 
   &__link
   {
-    flex: 0 0 96px;
+    @include screen_type("mobile")
+    {
+      flex: 0 0 96px;
+    }
+
+    @include screen_type("tablet", "desktop")
+    {
+      flex: 0 0 96px;
+    }
+
     height: 100%;
-
-    border-radius: 18px;
-
-    background-color: theme("primary");
-
-    text-align: center;
-    text-decoration: none;
-
-    &:hover
-    {
-      background-color: theme("secondary");
-    }
-
-    a
-    {
-      display: block;
-
-      width: 100%;
-      height: 100%;
-
-      padding: 8px 16px;
-
-      @include hanuman-normal-bold(1.4rem);
-    }
   }
 }
