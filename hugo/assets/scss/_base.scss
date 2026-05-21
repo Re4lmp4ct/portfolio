@@ -89,8 +89,8 @@ li
   @include lexend-deca-normal(1.5rem, 400)
 }
 
-a
+button
 {
-  text-decoration: none;
-  color: inherit;
+  all: unset;
+  cursor: pointer;
 }

@@ -8,10 +8,13 @@
         <div class="separator"></div>
         {{ if .Params.details }}
             <div class="project-details">
-                {{ range .Params.details }}
+                <p>{{ .Params.summary }}</p>
+                <div class="project-details__grid">
+                    {{ range .Params.details }}
                     <p>{{ .name }} :</p>
                     <p>{{ .value }}</p>
-                {{ end }}
+                    {{ end }}
+                </div>
             </div>
             <div class="separator"></div>
         {{ end }}

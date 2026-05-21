@@ -66,36 +66,40 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    img
+    figure
     {
       width: 100%;
 
-      justify-self: center;
+      text-align: center;
+    }
 
-      margin: 1rem 0;
+    img
+    {
+      margin-bottom: 1rem;
+      margin-left: auto;
+      margin-right: auto;
 
       object-fit: contain;
 
       @include screen_type("mobile")
       {
-        height: 200px;
+        width: 80%;
       }
 
       @include screen_type("tablet")
       {
-        height: 300px;
+        width: 70%;
       }
 
       @include screen_type("desktop")
       {
-        height: 400px;
+        width: 60%;
       }
     }
 
     figcaption
     {
       width: 100%;
-      text-align: center;
 
       @include lexend-deca-italic(1.5rem, 400);
     }

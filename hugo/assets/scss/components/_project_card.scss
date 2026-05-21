@@ -46,6 +46,9 @@
 
   &__link
   {
+    text-decoration: none;
+    color: inherit;
+
     pointer-events: none;
 
     @include lexend-deca-normal-bold(2rem);
