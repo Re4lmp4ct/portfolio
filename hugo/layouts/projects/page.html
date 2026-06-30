@@ -11,10 +11,13 @@
                 <p>{{ .Params.summary }}</p>
                 <div class="project-details__grid">
                     {{ range .Params.details }}
-                    <p>{{ .name }} :</p>
-                    <p>{{ .value }}</p>
+                        <p>{{ .name }} :</p>
+                        <p>{{ .value }}</p>
                     {{ end }}
                 </div>
+                {{ if .Params.gameUrl }}
+                    <p>You can play the game <a href="{{ .Params.gameUrl }}" target="_blank">here</a>!</p>
+                {{ end }}
             </div>
             <div class="separator"></div>
         {{ end }}

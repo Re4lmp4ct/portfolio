@@ -31,7 +31,7 @@
             {{ range $item.content }}
                 {{ if eq .type "paragraph" }}
                     {{ range .paragraphs }}
-                        <p>{{ . }}</p>
+                        <p>{{ . | safeHTML }}</p>
                     {{ end }}
                 {{ else if eq .type "image" }}
                     <figure>

@@ -129,5 +129,4 @@ However, I am proud of my contributions I made in a short period of time that al
 Olympic Esports. I am quite sure that it would have been a failure if I did not end up working on the gameplay and
 multiplayer.
 
-You can watch it featured in the Olympic Esports [here](https://www.youtube.com/watch?v=WY0VHHMb1JM). 
-
+Tic-Tac-Bow was one of the video games featured on Olympic Esports and you can watch the tournament [here](https://www.youtube.com/watch?v=WY0VHHMb1JM).
