@@ -15,4 +15,6 @@ params:
     js:
       - link: "plugins/glightbox/glightbox.js"
       - link: "plugins/lazy-loader.js"
-
+caches:
+  images:
+    dir: :cacheDir/images
