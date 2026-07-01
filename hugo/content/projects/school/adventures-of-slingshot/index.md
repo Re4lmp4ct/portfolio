@@ -20,7 +20,7 @@ contributions:
       - type: "unordered"
         introduction: "There are two basic enemy types:"
         items:
-          _ |
+          - |
             Melee - Move towards the player until in range and then start attacking.
           - |
             Ranged - Shoot the player when they are in range.
