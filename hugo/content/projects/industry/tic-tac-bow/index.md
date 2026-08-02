@@ -48,8 +48,9 @@ contributions:
         paragraphs:
           - |
             Once this was done, we started to parameterize the shooting and target board movement. The shooting was
-            refactored by my technical lead while I handled the target board movement. This allowed us to implement
-            target leading for the AI.
+            refactored by my technical lead while I handled the target board movement. This was to ensure determinism.
+            This also allowed us to improve the AI balance as we can fully control where its shot will land, no matter
+            how fast the target board moves.
   - title: "Multiplayer Refactor"
     content:
       - type: "ordered"
@@ -91,8 +92,7 @@ contributions:
           - |
             Lag Compensation - Ensure that any time sensitive information accounts for lag.
           - |
-            State Synchronization - Resets every player's game state when changing turn to remove desync during the 
-            most important moment of the game: when the player needs to aim.
+            State Synchronization - Ensure that the player's game state is accurate when their turn begins.
   - title: "UI Implementation"
     content: 
       - type: "paragraph"

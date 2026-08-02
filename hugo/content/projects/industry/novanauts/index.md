@@ -24,7 +24,7 @@ contributions:
               Every gameplay object is an entity that all uses the same set of attributes that are controlled by
               datasheets. There is no explicit implementation of any entity like a character or power up entity type;
               instead, they are just entities with certain values defined. For example, power ups are just entities
-              with skill associated with their on selected attribute.
+              that has a skill id in their on tap property.
         - type: "image"
           url: "data_driven_gameplay_1.png"
           caption: "A simplified overview of the game data"
@@ -41,6 +41,12 @@ contributions:
               Selector - A sequence of queries to determine which entities will be affected by the skill.
             - |
               Effect - An action that modifies the selected entities.
+        - type: "paragraph"
+          paragraphs:
+            - |
+              When the game starts to load, it will look through each character type in the player lineup and pass their
+              skill information to a skill factory. The factory will generate the desired selectors and effects and wire
+              them together to form a concrete skill.
     - title: "UI Implementation"
       content:
         - type: "paragraph"
@@ -66,19 +72,19 @@ contributions:
             - |
               One of the biggest question that we had was how the character skills would be animated as their in-game effect
               would be directly tied to the animation itself. We decided upon a paintbrush system where the animator
-              would animate a paintbrush alongside the skills to control its area of influence while the game designers would
-              use datasheets to modify the attributes of the paintbrush.
+              would animate a paintbrush alongside the skills to control the timing of the effect application while the game designers 
+              would work with datasheets to modify the attributes of the paintbrush.
         - type: "ordered"
           introduction: "I also pushed for a UI style guide to be created once the core UI concept was established. This was to
                          address the following issues:"
           items:
             - |
-              UI inconsistencies when different UI artists come up with UI designs.
+              UI inconsistencies when different UI artists were brought into the team temporarily to help with new UI designs.
             - |
               UI inconsistencies when different programmers implement the UI, most of them do it by eye.
             - |
-              Implementation of UI that did not come with the a concept. This usually occur when a simple UI is needed 
-              that uses existing assets, so it is faster for someone to implement it than to wait for the concept.
+              Implementation of UI that did not come with the a concept. This usually occurs when new UI is needed but we
+              already have all of the building blocks necessary to implement it and it follows the same layout as existing ones.
     - title: "Sandbox Environment"
       content: 
         - type: "paragraph"
@@ -110,10 +116,11 @@ that one of the higher ups used it as an example of the quality and polish that 
 
 I was selected as the temporary technical lead for a small team to work on a new game IP.
 My main responsibilities were to develop a solid foundation of the game until the new technical lead arrived and mentor
-an software engineer intern who did not have experience with game development.
+a software engineer intern who did not have experience with game development.
 
-After the new technical lead joined, my main responsibility shifted to the frontend of the game; gameplay and UI. 
+After the new technical lead joined, my main responsibility shifted to the frontend of the game; gameplay and UI. I was
+given full control of the architecture of the gameplay; I decided to adopt an unfamiliar approach as I wanted to
+practice working with [PureMVC](https://puremvc.org), a library that our technical lead integrated into Tic-Tac-Bow.
 
-Unfortunately, it did not pass the market test. I was quite upset about it, especially since it was taken down
-halfway through the market test due to an administrative issue on the play store. It killed most of the momentum that it
-had and it could not recover.
+Novanauts started out strong during the market test. Unfortunately, it was taken down halfway through the market test due to an 
+administrative issue on the play store. It killed most of the momentum that it had and Novanauts ended up failing the market test.
