@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+button
+{
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
 html
 {
   font-size: 62.5%;
@@ -90,10 +97,4 @@ a,
 li
 {
   @include lexend-deca-normal(1.5rem, 400)
-}
-
-button
-{
-  all: unset;
-  cursor: pointer;
 }
